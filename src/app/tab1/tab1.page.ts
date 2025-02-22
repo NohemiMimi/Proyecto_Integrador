@@ -1,13 +1,22 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
-import { ExploreContainerComponent } from '../explore-container/explore-container.component';
+import {
+  IonButton,
+  IonButtons,
+  IonContent,
+  IonHeader,
+  IonModal,
+  IonTitle,
+  IonToolbar,
+} from '@ionic/angular/standalone';
 
 @Component({
-  selector: 'app-tab1',
+  selector: 'app-example',
   templateUrl: 'tab1.page.html',
-  styleUrls: ['tab1.page.scss'],
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, ExploreContainerComponent],
+  styleUrls: ['tab1.page.css'],
+  imports: [IonButton, IonButtons, IonContent, IonHeader, IonModal, IonTitle, IonToolbar],
 })
 export class Tab1Page {
-  constructor() {}
+  async canDismiss(data?: undefined, role?: string) {
+    return role !== 'gesture';
+  }
 }
