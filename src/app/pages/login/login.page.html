@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <ion-header>
   <ion-toolbar>
     <ion-title>HidroVerde</ion-title>
@@ -35,41 +34,4 @@
   </div>
 </ion-content>
 
-=======
-<ion-header>
-  <ion-toolbar>
-    <ion-title>HidroVerde</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content class="ion-padding" style="background-color: #4CAF50;">
-  <div style="text-align: center; margin-top: 50px;">
-    <img src="leaf-phone.png" alt="HidroVerde Logo" style="width: 100px; height: 100px;">
-  </div>
-  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
-    <ion-card style="margin: 20px; padding: 20px; border-radius: 10px;">
-      <ion-item>
-        <ion-label position="floating">Email</ion-label>
-        <ion-input type="email" formControlName="email"></ion-input>
-      </ion-item>
-      <ion-text color="danger" *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
-        Email inválido
-      </ion-text>
-
-      <ion-item>
-        <ion-label position="floating">Contraseña</ion-label>
-        <ion-input type="password" formControlName="password"></ion-input>
-      </ion-item>
-      <ion-text color="danger" *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
-        La contraseña es requerida
-      </ion-text>
-
-      <ion-button expand="full" type="submit" [disabled]="loginForm.invalid" style="background-color: #8BC34A;">Ingresar</ion-button>
-    </ion-card>
-  </form>
-  <div style="text-align: center; margin-top: 20px;">
-    <p>¿Eres nuevo? <a href="/register" style="color: #8BC34A;">Regístrate</a></p>
-  </div>
-</ion-content>
-
->>>>>>> f68db5b5a67a83e86346c2a24bba0cc9ed8f5fe2
