@@ -9,6 +9,7 @@ import {
   IonToolbar,
 } from '@ionic/angular/standalone';
 
+
 @Component({
   selector: 'app-example',
   templateUrl: 'tab1.page.html',

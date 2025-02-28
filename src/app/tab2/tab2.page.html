@@ -1,17 +1,67 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Programar aspersor
     </ion-title>
   </ion-toolbar>
 </ion-header>
+<br>
+<ion-content [fullscreen]="true" >
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-grid>
+    <ion-row class="ion-align-items-center ion-padding-top">
+      <ion-col size="5" class="aspersor ion-text-right">
+        <p>Abrir:</p>
+      </ion-col>
+      <ion-col size="5" class="ion-text-left">
+        <ion-datetime-button datetime="abrir"></ion-datetime-button>
+        <ion-modal [keepContentsMounted]="true">
+          <ng-template>
+            <ion-datetime id="abrir" presentation="time"></ion-datetime>
+          </ng-template>
+        </ion-modal>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="5" class="aspersor ion-text-right">
+        <p>Cerrar:</p>
+      </ion-col>
+      <ion-col size="5" class="ion-text-left">
+        <ion-datetime-button datetime="cerrar"></ion-datetime-button>
+        <ion-modal [keepContentsMounted]="true">
+          <ng-template>
+            <ion-datetime id="cerrar" presentation="time"></ion-datetime>
+          </ng-template>
+        </ion-modal>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="ion-padding-top">
+    <ion-row class="ion-padding-top">
+      <ion-col size="12" class="riego ion-text-center ion-padding-top">
+        <p>Programar riego semanal</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-content class="ion-text-center ion-padding-top">
+    <div class="dias-container">
+      <button 
+        *ngFor="let dia of dias; let i = index"
+        (click)="toggleDia(i)" 
+        class="semana" 
+        [ngClass]="{'selected': dia.seleccionado}">
+        <span *ngIf="!dia.seleccionado">{{ dia.nombre }}</span>
+        <span *ngIf="dia.seleccionado">✔</span>
+</button>
+
+    </div>
+
+    <br><br><br><br>
+    <button class="guardar" (click)="guardarSeleccion()"><p>Guardar</p></button>
+  </ion-content>
 </ion-content>
