@@ -1,0 +1,51 @@
+ion-toolbar{
+  --background: #4CAF50;
+  color: white;
+  padding: 2px 5px;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Centra el contenido en toda la pantalla */
+ 
+}
+
+.login-card {
+  width: 90%;
+  max-width: 400px; /* Evita que sea muy grande */
+  text-align: center;
+  padding: 20px;
+  background: white; /* Fondo blanco para que resalte */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+}
+
+.card-img-top {
+  width: 145px;
+  height: 150px;
+  margin: 20px auto;
+  display: block;
+}
+
+.form-login ion-input {
+  margin: 10px 0;
+}
+
+/* Botón verde claro */
+ion-button {
+  color: white !important;
+  border-radius: 5px;
+  padding: 2px 100px;
+}
+
+
+
+.one{
+  --background: #159167;
+
+}
+
+
+

@@ -1,29 +1,13 @@
-<div class="ion-page" #page>
-  <ion-header>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>tab1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title>App</ion-title>
+      <ion-title size="large">tab1</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding">
-    <ion-button id="open-modal" expand="block">Open</ion-button>
-    <ion-modal #modal trigger="open-modal" [canDismiss]="canDismiss" [presentingElement]="page">
-      <ng-template>
-        <ion-header>
-          <ion-toolbar>
-            <ion-title>Modal</ion-title>
-            
-          </ion-toolbar>
-        </ion-header>
-        <ion-content class="ion-padding">
-          <p>
-            To close this modal, please use the "Close" button provided. Note that swiping the modal will not dismiss
-            it.
-          </p>
-        </ion-content>
-        <ion-buttons slot="end">
-          <ion-button (click)="modal.dismiss()">Close</ion-button>
-        </ion-buttons>
-      </ng-template>
-    </ion-modal>
-  </ion-content>
-</div>
+</ion-content>

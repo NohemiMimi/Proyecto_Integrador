@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">HidroVerde</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="one">
+  <div class="login-container">
+    <ion-card class="login-card">
+      <img src="https://www.utcalvillo.edu.mx/img/logo.png" class="card-img-top" alt="Login Icon">
+
+        <section class="form-login">
+          <ion-item>
+            <ion-input [(ngModel)]="usuarioCredes.usuario" label="Usuario" type="text" placeholder="Usuario" fill="outline" placeholder="Ingresa tu Usuario"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input [(ngModel)]="usuarioCredes.password" type="password" placeholder="Ingresa tuContraseña" label="Contraseña" fill="outline"></ion-input>
+          </ion-item>
+          <br>
+          <ion-button (click)="mostrar()" type="submit" id="boton"  expand="block">Iniciar sesión</ion-button>
+          <br>
+        </section>
+    </ion-card>
+  </div>
+</ion-content>

@@ -1,65 +1,60 @@
 ion-toolbar {
-    --background: #9ABF4B;
-    --color: white;
-    text-align: center;
+  --background: #4CAF50;
+  --color: white;
+  text-align: center;
 }
 
 ion-content {
-    --background: #D6F2D5;
+  --background: #C8E6C9;
 }
+
+
 
 ion-datetime-button::part(native) {
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    border-radius: 5px;
-    padding: 10px;
-    text-align: center;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  padding: 10px;
 }
 
-.aspersor{
-    font-size: 18px;
-}
-
-.riego{
-    font-size: 18px;
+.aspersor,
+.riego {
+  font-size: 18px;
 }
 
 .dias-container {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
 }
 
 .semana {
-    background-color: white;
-    color: black;
-    border-radius: 5px;
-    margin: 2px;
-    padding: 15px; 
-    font-size: 18px;
-    
-    
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
 }
 
-.semana:hover{
-    background-color: rgb(199, 199, 199);
-    color: white;
+.semana:hover {
+  background-color: #81C784;
+  color: white;
 }
+
 .semana.selected {
-    background-color: #c2ec68;
-    color: white;
-    font-weight: bold;
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
 }
 
 .guardar {
-    background-color: #C6D982;
-    color: white;
-    border-radius: 5px;
-    padding: 0px 50px;
-    font-size: 15px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 50px;
+  font-size: 15px;
 }
 
 .guardar:hover {
-    background-color: rgb(199, 199, 199);
-    color: black;
+  background-color: #388E3C;
 }
