@@ -1,17 +1,18 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { NavController } from '@ionic/angular'; // Importa NavController
 import { 
   IonHeader, IonToolbar, IonTitle, IonContent,
   IonDatetimeButton, IonModal, IonDatetime, IonGrid, 
   IonRow, IonCol 
 } from '@ionic/angular/standalone';
-import { CommonModule } from '@angular/common'; // 👈 Importa CommonModule
 
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss'],
   imports: [
-    CommonModule, // 👈 Agregar esto para que funcione *ngFor y [ngClass]
+    CommonModule,
     IonHeader, 
     IonToolbar, 
     IonTitle, 
@@ -35,7 +36,7 @@ export class Tab2Page {
     { nombre: 'D', seleccionado: false }
   ];
 
-  constructor() {}
+  constructor(private navCtrl: NavController) {} // Inyecta NavController
 
   toggleDia(index: number) {
     this.dias[index].seleccionado = !this.dias[index].seleccionado;
@@ -44,5 +45,8 @@ export class Tab2Page {
   guardarSeleccion() {
     const diasSeleccionados = this.dias.filter(dia => dia.seleccionado).map(dia => dia.nombre);
     console.log("Días seleccionados:", diasSeleccionados);
+
+    // Redirigir a Tab 3
+    this.navCtrl.navigateForward('/tabs/tab3');
   }
 }

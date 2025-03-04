@@ -190,12 +190,16 @@ h3{
 }
 
 .btn{
-  padding: 5px 200px;
+  padding: 5px;
   --background: #C6D982;
   color: black;
+  min-width: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .btn:hover{
   --background: white;
   color: black;
+  
 }

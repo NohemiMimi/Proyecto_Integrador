@@ -44,6 +44,7 @@ ion-card {
   width: 100%;
   max-width: 400px;
   box-sizing: border-box;
+  border-radius: 10px; /* Aumenta el radio para hacer el contenedor más redondeado */
   
   ion-card-header {
     text-align: center;
@@ -58,18 +59,6 @@ ion-card {
       width: 100%; /* Asegura que los elementos ocupen todo el ancho del contenedor */
     }
   }
-}
-
-.greenhouse {
-  display: flex;
-  justify-content: center; /* Centra la imagen horizontalmente */
-  align-items: center; /* Centra la imagen verticalmente */
-  margin-top: 20px; /* Ajusta el margen superior según sea necesario */
-}
-
-.greenhouse img {
-  max-width: 100%;
-  height: auto; /* Hace que la imagen sea responsiva */
 }
 
 .footer {

@@ -2,25 +2,26 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { 
   IonContent,
   IonButton, 
   IonCard, 
   IonInput, 
-  IonItem, IonHeader, IonToolbar, IonTitle, IonLabel, IonCardContent } from '@ionic/angular/standalone';
+  IonItem, IonHeader, IonToolbar, IonTitle, IonLabel, IonCardContent, IonCardHeader, IonCardTitle } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
   standalone: true,
-  imports: [IonCardContent, IonItem, 
+  imports: [IonCardTitle, IonItem, 
     IonInput, 
     IonCard, 
     IonButton, 
     IonContent, 
     CommonModule, 
-    FormsModule, CommonModule,IonHeader,IonToolbar,IonTitle]
+    FormsModule, CommonModule,IonHeader,IonToolbar,IonTitle, RouterModule, IonLabel, IonCardContent, IonCardHeader]
 })
 export class LoginPage implements OnInit {
   credenciales={

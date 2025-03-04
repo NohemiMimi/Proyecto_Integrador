@@ -1,20 +1,19 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Programar aspersor
-    </ion-title>
+    <ion-title>Programar aspersor</ion-title>
   </ion-toolbar>
 </ion-header>
-<br>
-<ion-content [fullscreen]="true" >
 
+<ion-content [fullscreen]="true">
+  <br><br><br><br><br><br><br><br>
+  <!-- Sección de programación de apertura -->
   <ion-grid>
-    <ion-row class="ion-align-items-center ion-padding-top">
-      <ion-col size="5" class="aspersor ion-text-right">
+    <ion-row class="ion-align-items-center">
+      <ion-col size="4" class="aspersor ion-text-right">
         <p>Abrir:</p>
       </ion-col>
-      <ion-col size="5" class="ion-text-left">
-        <ion-datetime-button datetime="abrir"></ion-datetime-button>
+      <ion-col size="6" class="ion-text-left">
+        <ion-datetime-button datetime="abrir" class="datetime-btn"></ion-datetime-button>
         <ion-modal [keepContentsMounted]="true">
           <ng-template>
             <ion-datetime id="abrir" presentation="time"></ion-datetime>
@@ -23,14 +22,15 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-
+  
+  <!-- Sección de programación de cierre -->
   <ion-grid>
     <ion-row class="ion-align-items-center">
-      <ion-col size="5" class="aspersor ion-text-right">
+      <ion-col size="4" class="aspersor ion-text-right">
         <p>Cerrar:</p>
       </ion-col>
-      <ion-col size="5" class="ion-text-left">
-        <ion-datetime-button datetime="cerrar"></ion-datetime-button>
+      <ion-col size="6" class="ion-text-left">
+        <ion-datetime-button datetime="cerrar" class="datetime-btn"></ion-datetime-button>
         <ion-modal [keepContentsMounted]="true">
           <ng-template>
             <ion-datetime id="cerrar" presentation="time"></ion-datetime>
@@ -40,28 +40,30 @@
     </ion-row>
   </ion-grid>
 
+  <!-- Sección de programación semanal -->
   <ion-grid class="ion-padding-top">
-    <ion-row class="ion-padding-top">
-      <ion-col size="12" class="riego ion-text-center ion-padding-top">
+    <ion-row>
+      <ion-col size="12" class="riego ion-text-center">
         <p>Programar riego semanal</p>
       </ion-col>
     </ion-row>
   </ion-grid>
 
-  <ion-content class="ion-text-center ion-padding-top">
-    <div class="dias-container">
-      <button 
-        *ngFor="let dia of dias; let i = index"
-        (click)="toggleDia(i)" 
-        class="semana" 
-        [ngClass]="{'selected': dia.seleccionado}">
-        <span *ngIf="!dia.seleccionado">{{ dia.nombre }}</span>
-        <span *ngIf="dia.seleccionado">✔</span>
-</button>
+  <!-- Días de la semana -->
+  <div class="dias-container">
+    <button 
+      *ngFor="let dia of dias; let i = index"
+      (click)="toggleDia(i)" 
+      class="semana" 
+      [ngClass]="{'selected': dia.seleccionado}">
+      <span *ngIf="!dia.seleccionado">{{ dia.nombre }}</span>
+      <span *ngIf="dia.seleccionado">✔</span>
+    </button>
+  </div>
 
-    </div>
-
-    <br><br><br><br>
+  <!-- Botón de guardar -->
+  <div class="ion-text-center ion-padding-top">
     <button class="guardar" (click)="guardarSeleccion()"><p>Guardar</p></button>
-  </ion-content>
+  </div>
+
 </ion-content>

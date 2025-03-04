@@ -7,14 +7,12 @@ import { NavController } from '@ionic/angular'; // Importamos NavController
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
   styleUrls: ['tab3.page.scss'],
-  imports: [CommonModule, IonHeader, IonToolbar, IonTitle, IonContent, IonIcon, IonButton]
+  imports: [CommonModule, IonHeader, IonToolbar, IonTitle, IonContent, IonButton]
 })
 
 export class Tab3Page {
   aspersores = [
     { nombre: 'Aspersor 1', humedad: '60%', temperatura: '25°C', encendido: false },
-    { nombre: 'Aspersor 2', humedad: '55%', temperatura: '26°C', encendido: false },
-    { nombre: 'Aspersor 3', humedad: '70%', temperatura: '24°C', encendido: false },
   ];
   
   selectedIndex: number | null = 0; // Ahora permitimos valores null
@@ -48,7 +46,7 @@ export class Tab3Page {
   
   reordenarAspersores() {
     this.aspersores.forEach((aspersor, index) => {
-      aspersor.nombre = `Aspersor ${index + 1}`; // Ahora está correctamente formateado
+      aspersor.nombre = `Aspersor ${index + 1}`;
     });
   }
   

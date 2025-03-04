@@ -1,51 +1,50 @@
-ion-toolbar{
+ion-toolbar {
   --background: #4CAF50;
   color: white;
   padding: 2px 5px;
+}
+
+.one {
+  --background: #159167;
 }
 
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Centra el contenido en toda la pantalla */
- 
+  height: 100vh;
+  padding: 20px;
 }
 
 .login-card {
-  width: 90%;
-  max-width: 400px; /* Evita que sea muy grande */
+  width: 100%;
+  max-width: 400px;
   text-align: center;
-  padding: 20px;
-  background: white; /* Fondo blanco para que resalte */
-  border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+  padding: 5px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .card-img-top {
   width: 145px;
   height: 150px;
-  margin: 20px auto;
   display: block;
+  margin: auto; /* Centra horizontalmente */
 }
 
-.form-login ion-input {
-  margin: 10px 0;
-}
 
-/* Botón verde claro */
+ion-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  ion-item {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
 ion-button {
-  color: white !important;
-  border-radius: 5px;
-  padding: 2px 100px;
+  width: 60%;
+  margin-top: 10px;
 }
-
-
-
-.one{
-  --background: #159167;
-
-}
-
-
-
